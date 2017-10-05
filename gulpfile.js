@@ -44,8 +44,8 @@ gulp.task('build', ['clean', 'sass', 'es6'], () => {
 let buildCss = gulp.src('src/css/style.css')
     .pipe(gulp.dest('dist/css'));
 
-let buildJs = gulp.src(['src/js/dest/*', 'src/js/libs.min.js'])
-    .pipe(gulp.dest('dist/js'));
+let buildJs = gulp.src(['src/js/dest/*.js', 'src/libs/*.js'])
+    .pipe(gulp.dest('dist/js/dest'));
 
 let buildHtml = gulp.src('src/*.html')
     .pipe(gulp.dest('dist'));
