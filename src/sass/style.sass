@@ -1,0 +1,55 @@
+$lightgrey: #fafafa
+$blue: #4285ff
+
+.player
+    position: relative
+    width: 1000px
+    height: 500px
+
+    .player__prev,
+    .player__next
+        width: 32px
+        height: 32px
+        outline: none
+        border: none
+        position: absolute
+
+    .player__prev:hover,
+    .player__next:hover
+        background-color: #F5F5F5;
+        cursor: pointer
+
+    .player__prev
+        background: $lightgrey url('../img/arrow-prev.png') no-repeat 6px 6px
+        background-size: 20px 20px
+
+    .player__next
+        margin-left: 32px 
+        background: $lightgrey url('../img/arrow-next.png') no-repeat 6px 6px
+        background-size: 20px 20px
+
+    .player__body
+        width: 936px
+        margin-left: 64px
+
+    .player__playlist
+        margin-top: -4px
+        list-style: none
+        background-color: $lightgrey
+        border-top: 0.1px solid grey
+
+        .player__song
+            margin-left: -25px
+            padding: 
+                top: 10px
+                bottom: 10px
+
+            &:first-child
+                padding-top: 15px
+
+        .player__song:hover
+            color: $blue
+            cursor: pointer
+
+.active
+    color: $blue
