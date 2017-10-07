@@ -1,0 +1,65 @@
+.player {
+  margin: auto;
+  position: relative;
+  width: 1000px;
+  height: 500px;
+}
+
+.player .player__prev,
+.player .player__next {
+  width: 32px;
+  height: 32px;
+  outline: none;
+  border: none;
+  position: absolute;
+}
+
+.player .player__prev:hover,
+.player .player__next:hover {
+  background-color: #F5F5F5;
+  cursor: pointer;
+}
+
+.player .player__prev {
+  background: #fafafa url("../img/arrow-prev.png") no-repeat 6px 6px;
+  -webkit-background-size: 20px 20px;
+          background-size: 20px 20px;
+}
+
+.player .player__next {
+  margin-left: 32px;
+  background: #fafafa url("../img/arrow-next.png") no-repeat 6px 6px;
+  -webkit-background-size: 20px 20px;
+          background-size: 20px 20px;
+}
+
+.player .player__body {
+  width: 936px;
+  margin-left: 64px;
+}
+
+.player .player__playlist {
+  margin-top: -4px;
+  list-style: none;
+  background-color: #fafafa;
+}
+
+.player .player__playlist .player__song {
+  font-family: Arial, 'Times New Roman', Times, serif;
+  margin-left: -25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.player .player__playlist .player__song:first-child {
+  padding-top: 15px;
+}
+
+.player .player__playlist .player__song:hover {
+  color: #4285ff;
+  cursor: pointer;
+}
+
+.active {
+  color: #4285ff;
+}

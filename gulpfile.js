@@ -2,7 +2,8 @@ const gulp         = require('gulp'),
       sass         = require('gulp-sass'),
       browserSync  = require('browser-sync'),
       babel        = require('gulp-babel'),
-      autoprefixer = require('gulp-autoprefixer');
+      autoprefixer = require('gulp-autoprefixer'),
+      del          = require('del');
 
 gulp.task('sass', () => {
 return gulp.src('src/sass/**/*.sass')
@@ -41,18 +42,18 @@ gulp.task('watch', ['browser-sync', 'es6'], () => {
 });
 
 gulp.task('build', ['clean', 'sass', 'es6'], () => {
-let buildCss = gulp.src('src/css/**/*')
-    .pipe(gulp.dest('dist/css'));
+    let buildCss = gulp.src('src/css/**/*')
+        .pipe(gulp.dest('dist/css'));
 
-let buildJs = gulp.src('src/js/dest/*.js')
-    .pipe(gulp.dest('dist/js'));
+    let buildJs = gulp.src('src/js/dest/*.js')
+        .pipe(gulp.dest('dist/js/dest'));
 
-let buildHtml = gulp.src('src/*.html')
-    .pipe(gulp.dest('dist'));
+    let buildHtml = gulp.src('src/*.html')
+        .pipe(gulp.dest('dist'));
 
-let buildImg = gulp.src('src/img/*')
-    .pipe(dulp.dest('dist/img'));
+    let buildImg = gulp.src('src/img/*')
+        .pipe(gulp.dest('dist/img'));
 
-let buildMusic = gulp.src('src/data/*')
-    .pipe(dulp.dest('dist/data'));
+    let buildMusic = gulp.src('src/data/*')
+        .pipe(gulp.dest('dist/data'));
 });

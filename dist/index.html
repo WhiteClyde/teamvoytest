@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="player">
+		<button class="player__prev"></button><button class="player__next"></button>
+		<audio controls class="player__body" onended="onEnded();">
+			<source class="player__source" src="data/1.mp3" type="audio/mpeg"></source>
+        </audio>
+        <ul class="player__playlist">
+			<li class="player__song active" data-number="1">1. Jimi Hendrix - All Along The Watchover</li>
+			<li class="player__song" data-number="2">2. Jimi Hendrix - Voodoo Chile</li>
+            <li class="player__song" data-number="3">3. Jimi Hendrix - Purple Haze</li>
+            <li class="player__song" data-number="4">4. Led Zeppelin - The Ocean</li>
+		</ul>
+		</div>
+	</div>
+
+    <script type="text/javascript" src="js/dest/main.js"></script>
+</body>
+</html>
